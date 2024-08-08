@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konversation</title>
+    <style type="text/css" media="screen">
+    body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        background: #333;
+        color: white;
+        font: 1em Tahoma;
+    }
+
+    #editor-table {
+        height: calc(100vh - 2em);
+        border: 0;
+        padding: 0;
+    }
+
+    #editor-table tr, #editor-table td {
+        height: 100%;
+        border: 0;
+        padding: 0;
+        width: 10%;
+    }
+
+    #editor-table tr, #editor-table td, .ace_editor {
+        max-width: 100%;
+        min-width: 32px;
+    }
+
+    .ace_editor {
+        border: 1px solid lightgray;
+        height: 100%;
+        width: 100%;
+        resize: horizontal;
+        margin: 0;
+    }
+
+    .ace_editor.ace_autocomplete {
+        width: 800px !important;
+    }
+
+    #header {
+        padding: 0.3em;
+    }
+
+    #header a {
+        color: #aac;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+<div id="header">
+    <button id="compile">Compile</button>
+    <button id="run">Run</button>
+    <div id="options"></div>
+</div>
+<table id="editor-table" style="width:100%;margin-bottom:12px;">
+    <tr>
+        <td style="vertical-align:top;" id="source-cell"><textarea id="source"></textarea></td>
+        <td style="vertical-align:top;" id="compiled-cell"><textarea id="compiled"></textarea></td>
+        <td style="vertical-align:top;" id="result-cell"><textarea id="result"></textarea></td>
+    </tr>
+</table>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.9.5/ace.min.js" integrity="sha512-19GpbkvqAWqGV89MzaDT7WpqKohnbOl8Kkpg5qRWpB+hlKk3leh45crhkhJAlhPup/VCgXGJLH48mu2Ewdvdcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="konversation.js"></script>
+
+</body>
+</html>
